@@ -20,8 +20,8 @@ namespace Bibliotec.Models
         public string Senha { get; set; }
 
         [ForeignKey("Curso")] 
-        public int CursoId { get; set; }
-        public Curso Curso { get; set; }
+        public int? CursoId { get; set; }
+        public Curso? Curso { get; set; }
        
     }
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

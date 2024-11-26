@@ -37,10 +37,12 @@ namespace Bibliotec.Controllers
 
             if (usuarioBuscado == null){
                 Console.WriteLine($"Dados invalidos!");
-                return LocalRedirect("~/Login");
+                return LocalRedirect("~/Home");
             }else {
                 Console.WriteLine("Dados Corretos, Bem vindo :)");
-                return LocalRedirect("~/Livro");
+                HttpContext.Session.SetString("Admin", usuarioBuscado.UsuarioId.ToString());
+                HttpContext.Session.SetString("Admin", usuarioBuscado.Admin.ToString());
+                return LocalRedirect("~/Home");
             }
 
 

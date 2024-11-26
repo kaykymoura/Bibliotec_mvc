@@ -16,9 +16,12 @@ namespace Bibliotec.Models
         public string? Contato { get; set; }
         public bool Admin { get; set; }
         public bool Status { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
 
         [ForeignKey("Curso")] 
         public int CursoId { get; set; }
         public Curso Curso { get; set; }
+       
     }
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
